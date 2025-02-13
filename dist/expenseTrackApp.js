@@ -70,7 +70,6 @@ export const deleteExpense = (expenseID) => {
     storeExpenses(modifiedExpenses);
 };
 export const updateExpense = (updatedExpense) => {
-    // console.log(updatedExpense);
     const modifiedExpenses = getExpenses().map(expense => {
         return expense.id === updatedExpense.id ? updatedExpense : expense;
     });
