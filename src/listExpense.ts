@@ -1,4 +1,4 @@
-import { Categories, IExpenseData, getExpenses, logExpense,filterExpense, fillSampleData, storeExpenses, updateExpense,deleteExpense } from "./expenseTrackApp.js";
+import { Categories, IExpenseData, getExpenses, logExpense,updateExpense,deleteExpense } from "./expenseTrackApp.js";
 import { 
     tableBody,
     addExpenseButton,
@@ -10,10 +10,7 @@ import {
  } from "./domElements.js";
 
 
-export const formatDate = (date: any): string => {
-     const validDate = date instanceof Date ? date : new Date(date);
-     return validDate.toISOString().split('T')[0];
- };
+
 
 document.addEventListener('DOMContentLoaded',()=>{
     const tableData = getExpenses();
@@ -44,6 +41,7 @@ document.addEventListener('DOMContentLoaded',()=>{
         })
     
         const deleteButton = tableRow.querySelector('.delete-btn');
+
         deleteButton?.addEventListener('click',()=>{
             const confirmDelete = window.confirm('Are you sure you want to delete this expense?');
             if (confirmDelete) {
@@ -127,11 +125,6 @@ document.addEventListener('DOMContentLoaded',()=>{
             });
     };
     
-    
-    
-    
-    
-    
     const populateTable = (tableData : IExpenseData[]):void=> {
         if(tableBody) tableBody.innerHTML = '';
         tableData.forEach((data)=>{
@@ -175,3 +168,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 
 })
 
+export const formatDate = (date: any): string => {
+    const validDate = date instanceof Date ? date : new Date(date);
+    return validDate.toISOString().split('T')[0];
+};

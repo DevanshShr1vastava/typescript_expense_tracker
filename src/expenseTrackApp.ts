@@ -85,7 +85,7 @@ export const deleteExpense = (expenseID:number):void=>{
 }
 
 export const updateExpense = (updatedExpense:IExpenseData):void=>{
-    // console.log(updatedExpense);
+    
     const modifiedExpenses = getExpenses().map(expense=>{
         return expense.id === updatedExpense.id ? updatedExpense : expense
     });

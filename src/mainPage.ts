@@ -1,25 +1,11 @@
 import { 
-        Categories,
         IExpenseData,
         getExpenses,
-        logExpense,
-        filterExpense, 
-        fillSampleData,
-        storeExpenses,
-        updateExpense,
-        deleteExpense,
         calculateCategoryTotals,
         latestExpenses
  } from "./expenseTrackApp.js";
 
 import { 
-    tableBody,
-    addExpenseButton,
-    addExpenseAmount,
-    addExpenseCategory,
-    addExpenseDate,
-    addExpenseDescription,
-    filterByCategory,
     recentExpenseTable
  } from "./domElements.js";
 

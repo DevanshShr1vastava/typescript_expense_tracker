@@ -1,9 +1,5 @@
 import { Categories, getExpenses, logExpense, updateExpense, deleteExpense } from "./expenseTrackApp.js";
 import { tableBody, addExpenseButton, addExpenseAmount, addExpenseCategory, addExpenseDate, addExpenseDescription, filterByCategory } from "./domElements.js";
-export const formatDate = (date) => {
-    const validDate = date instanceof Date ? date : new Date(date);
-    return validDate.toISOString().split('T')[0];
-};
 document.addEventListener('DOMContentLoaded', () => {
     const tableData = getExpenses();
     const createRow = (expense) => {
@@ -135,3 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+export const formatDate = (date) => {
+    const validDate = date instanceof Date ? date : new Date(date);
+    return validDate.toISOString().split('T')[0];
+};
