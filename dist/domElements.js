@@ -1,0 +1,10 @@
+export const tableBody = document.querySelector('#expense-table-body');
+export const addExpenseForm = document.getElementById('expenseForm');
+export const addExpenseAmount = document.querySelector('#expenseAmount');
+export const addExpenseCategory = document.querySelector('#expenseCategory');
+export const addExpenseDate = document.querySelector('#expense-date');
+export const addExpenseDescription = document.querySelector('#expenseDescription');
+const modalElement = document.querySelector('#staticBackdrop');
+export const addExpenseButton = document.querySelector('#add-expense-button');
+export const filterByCategory = document.getElementById("category-selector");
+export const recentExpenseTable = document.getElementById('recent-expense-table-body');
