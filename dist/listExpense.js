@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
             option.textContent = category;
             inputCategoryElement.appendChild(option);
         });
-        inputCategoryElement.value = inputCategoryElement.textContent;
+        inputCategoryElement.value = expense.category;
         descriptionCell.replaceChild(descriptionInput, descriptionElement);
         amountCell.replaceChild(amountInput, amountElement);
         categoryCell.replaceChild(inputCategoryElement, categoryElement);
