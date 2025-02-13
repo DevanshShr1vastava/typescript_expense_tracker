@@ -45,7 +45,10 @@ document.addEventListener('DOMContentLoaded',()=>{
     
         const deleteButton = tableRow.querySelector('.delete-btn');
         deleteButton?.addEventListener('click',()=>{
-            deleteRow(expense.id,tableRow);
+            const confirmDelete = window.confirm('Are you sure you want to delete this expense?');
+            if (confirmDelete) {
+                deleteRow(expense.id, tableRow);
+            }
         })
     
         tableBody?.appendChild(tableRow);

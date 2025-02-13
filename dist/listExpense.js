@@ -31,7 +31,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         const deleteButton = tableRow.querySelector('.delete-btn');
         deleteButton === null || deleteButton === void 0 ? void 0 : deleteButton.addEventListener('click', () => {
-            deleteRow(expense.id, tableRow);
+            const confirmDelete = window.confirm('Are you sure you want to delete this expense?');
+            if (confirmDelete) {
+                deleteRow(expense.id, tableRow);
+            }
         });
         tableBody === null || tableBody === void 0 ? void 0 : tableBody.appendChild(tableRow);
     };
